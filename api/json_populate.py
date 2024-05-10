@@ -182,13 +182,11 @@ def populate_json_response(pre_json):
     }
 
     json_response = populate_family_object(pre_json, json_response)
-    json_response["will"] = populate_will_array_objects(pre_json["will"])
-    json_response["trusts"] = populate_trusts_array(pre_json["trusts"])
 
-    print(
-        "_________________ json_response __________________\n",
-        json_response,
-        "_________________ json_response __________________\n",
-    )
+    if "will" in pre_json.keys():
+        json_response["will"] = populate_will_array_objects(pre_json["will"])
+
+    if "trusts" in pre_json.keys():
+        json_response["trusts"] = populate_trusts_array(pre_json["trusts"])
 
     return json_response

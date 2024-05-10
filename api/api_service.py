@@ -1,22 +1,22 @@
 import json
-from flask import Blueprint, jsonify, request
+from flask import request
 
+from .responses import response_200, response_error
 from .string_cleaner import clean_string
 from .json_populate import populate_json_response
 
-api_bp = Blueprint("api_bp", __name__, url_prefix="/api")
+
+def error_handler(error, data):
+    return response_error(error, data)
 
 
-@api_bp.route("/ping")
 def pong():
-    data = {"status": 200, "message": "pong", "data": {}}
-    return jsonify(data)
+    return response_200("pong")
 
 
-@api_bp.route("/json")
 def get_json():
     raw_text = request.get_data(as_text=True)
     cleaned = clean_string(raw_text)
     json_cleaned = json.loads(cleaned)
     json_response = populate_json_response(json_cleaned)
-    return jsonify({"status": 200, "message": "ok", "data": json_response})
+    return response_200(json_response)
