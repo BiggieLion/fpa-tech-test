@@ -1,0 +1,151 @@
+{
+  "family": {
+      "spouse": [
+          "full name",
+          "full name"
+      ],
+      "children": [
+          "full name",
+          "full name"
+      ],
+      "other_family": [
+          {
+              "name": "full name",
+              "relationship": "string"
+          }
+      ],
+      "self": [
+          "full name"
+      ]
+  },
+  "will": [
+      {
+          "title": {
+              "value": "string"
+          },
+          "executor": [
+              "full name",
+              "full name"
+          ],
+          "replacement_executor": [
+              "full name",
+              "full name"
+          ],
+          "guardian": [
+              "full name"
+          ],
+          "state": [
+              "string"
+          ],
+          "willOwner": {
+              "value": "full name"
+          },
+          "dateOfWill": {
+              "value": "DD/MM/YYYY"
+          },
+          "assets": [
+              {
+                  "assetName": "string",
+                  "assetType": "string",
+                  "primaryBeneficiaries": [
+                      {
+                          "whenWillTransfer": "string",
+                          "isItFirstDeathOrSecondDeath": "string",
+                          "beneficiaries": [
+                              {
+                                  "name": "full name",
+                                  "value": "string",
+                                  "amount": "string",
+                                  "comment": "string"
+                              }
+                          ]
+                      }
+                  ]
+              }
+          ],
+          "materialInformation": [
+              {
+                  "value": "string",
+                  "page": "string",
+                  "paragraph": "string"
+              }
+          ],
+          "isItAPouroverWill": "string",
+          "whichPouroverTrust": "string",
+          "areThereTestamentaryTrusts": "string",
+          "whichTestamentaryTrust": "string"
+      }
+  ],
+  "trusts": [
+      {
+          "title": {
+              "value": "string"
+          },
+          "dateOfTrust": "DD/MM/YYYY",
+          "grantor": [
+              "full name",
+              "full name"
+          ],
+          "trustee": [
+              {
+                  "name": "full name",
+                  "relation": "string",
+                  "trusteeType": "string",
+                  "trusteeTrusteeOrCoTrustee": "string",
+                  "trusteeCanTrusteesActIndividually": "string",
+                  "trusteeCanAnyCoTrusteeContinueAsSoleTrustee": "string",
+                  "page": "string",
+                  "paragraph": "string"
+              }
+          ],
+          "type": "string",
+          "state": [
+              "string"
+          ],
+          "assets": [
+              {
+                  "assetName": "string",
+                  "assetType": "string",
+                  "primaryBeneficiaries": [
+                      {
+                          "whenWillTransfer": "string",
+                          "isItFirstDeathOrSecondDeath": "string",
+                          "beneficiaries": [
+                              {
+                                  "name": "full name",
+                                  "value": "string",
+                                  "amount": "string",
+                                  "comment": "string"
+                              }
+                          ]
+                      }
+                  ]
+              }
+          ],
+          "trustees": [
+              {
+                  "name": "full name",
+                  "relation": "string",
+                  "trusteeType": "string",
+                  "trusteeTrusteeOrCoTrustee": "string",
+                  "trusteeCanTrusteesActIndividually": "string",
+                  "trusteeCanAnyCoTrusteeContinueAsSoleTrustee": "string",
+                  "page": "string",
+                  "paragraph": "string"
+              }
+          ],
+          "subtype": "string",
+          "jointOrSingle": "string",
+          "grantorOrNonGrantorTrust": "string",
+          "resultingTrusts": "string",
+          "listsAssets": "string",
+          "materialInformation": [
+              {
+                  "value": "string",
+                  "page": "string",
+                  "paragraph": "string"
+              }
+          ]
+      }
+  ]
+}
